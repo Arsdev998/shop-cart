@@ -4,6 +4,7 @@ const showResult = "Showing 1–12 of 139 Results";
 import Data from "../products.json";
 import ProductCard from "./ProductCard";
 import Pagination from "./Pagination";
+import Seacrh from "./Seacrh";
 const Shop = () => {
   const [GridList, SetGridList] = useState(true);
   const [products, setProducts] = useState(Data);
@@ -62,7 +63,11 @@ const Shop = () => {
                 />
               </article>
             </div>
-            <div className="col-lg-4 col-12">right side</div>
+            <div className="col-lg-4 col-12">
+            <aside>
+              <Seacrh products={products} GridList={GridList}/>
+            </aside>
+            </div>
           </div>
         </div>
       </div>
