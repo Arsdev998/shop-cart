@@ -16,7 +16,8 @@ const ProductCard = ({ GridList, product }) => {
             {/* product images */}
             <div className="product-thumb">
               <div className="pro-thumb">
-                <img src={product.img} alt="" />
+                <img
+                 src={product.img} alt="" />
               </div>
               {/* product action link */}
               <div className="product-action-link">

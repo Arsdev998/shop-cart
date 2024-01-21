@@ -2696,7 +2696,8 @@
                             @extend %hidden;
                             .pro-thumb {
                                 img {
-                                    @extend %w-100;
+                                    @extend %w-100 ;
+                                    
                                 }
                             }
                         }
