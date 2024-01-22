@@ -19,7 +19,6 @@ const SingleProduct = () => {
   }, []);
 
   const result = product.filter((p) => p.id === id);
-  console.log(result);
   return (
     <div>
       <PageHeader title={"OUR SHOP SINGLE"} curpage={"Shop / Single Product"} />
@@ -68,13 +67,13 @@ const SingleProduct = () => {
                     </div>
                     {/* details */}
                     <div className="col-md-6 col-12">
-                        <div className="post-content">
-                            <div>
-                                {
-                                    result.map(item => <ProductDisplay key={item.id} item={item}/>)
-                                }
-                            </div>
+                      <div className="post-content">
+                        <div>
+                          {result.map((item) => (
+                            <ProductDisplay key={item.id} item={item} />
+                          ))}
                         </div>
+                      </div>
                     </div>
                   </div>
                 </div>
