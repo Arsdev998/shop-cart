@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Ratting from "../components/Ratting";
 
 const ProductCard = ({ GridList, product }) => {
-  console.log(product);
   return (
     <div
       className={`shop-product-wrap row justify-content-center ${
@@ -16,8 +15,7 @@ const ProductCard = ({ GridList, product }) => {
             {/* product images */}
             <div className="product-thumb">
               <div className="pro-thumb">
-                <img
-                 src={product.img} alt="" />
+                <img src={product.img} alt="" />
               </div>
               {/* product action link */}
               <div className="product-action-link">

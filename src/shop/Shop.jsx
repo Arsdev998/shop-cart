@@ -5,6 +5,9 @@ import Data from "../products.json";
 import ProductCard from "./ProductCard";
 import Pagination from "./Pagination";
 import Seacrh from "./Seacrh";
+import ShopCategory from "./ShopCategory";
+import PopularPost from "./PopularPost";
+import Tags from "./Tags";
 const Shop = () => {
   const [GridList, SetGridList] = useState(true);
   const [products, setProducts] = useState(Data);
@@ -24,6 +27,18 @@ const Shop = () => {
   // function to change the current page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+  };
+
+  // filter product base on category
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const menuItem = [...new Set(Data.map((VaL) => VaL.category))];
+
+  const filterItem = (curcat) => {
+    const newItem = Data.filter((newVaL) => {
+      return newVaL.category === curcat;
+    });
+    setSelectedCategory(curcat);
+    setProducts(newItem);
   };
 
   return (
@@ -64,9 +79,18 @@ const Shop = () => {
               </article>
             </div>
             <div className="col-lg-4 col-12">
-            <aside>
-              <Seacrh products={products} GridList={GridList}/>
-            </aside>
+              <aside>
+                <Seacrh products={products} GridList={GridList} />
+                <ShopCategory
+                  filterItem={filterItem}
+                  setItem={setProducts}
+                  menuItem={menuItem}
+                  setProducts={setProducts}
+                  setSelectedCategory={selectedCategory}
+                />
+                <PopularPost/>
+                <Tags/>
+              </aside>
             </div>
           </div>
         </div>
