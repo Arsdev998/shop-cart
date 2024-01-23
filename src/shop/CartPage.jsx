@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
 import delImg from "../assets/images/shop/del.png";
+import CheckOutPage from "./CheckOutPage";
 const CartPage = () => {
   const [cartsItems, setCartItems] = useState([]);
   useEffect(() => {
@@ -140,53 +141,100 @@ const CartPage = () => {
 
                 <from className="cart-checkout">
                   <input type="submit" value={"Update Cart"} />
-                  <div>checkout page</div>
+                  <div><CheckOutPage/></div>
                 </from>
               </div>
               {/* chekout box end*/}
-            </div>
-            {/* cart bottom end -------------------- */}
-
-            {/* shoping box */}
-            <div className="shiping-box">
-              <div className="row">
-                <div className="col-md-6 col-12">
-                  <div className="calculate-shipping">
-                    <h3>Calculate Shipping</h3>
-                    <div className="outline-select">
-                      <select>
-                        <option value="JKT">Jakarta (JKT)</option>
-                        <option value="JATIM">Jawa Timur (JATIM)</option>
-                        <option value="JATENG">Jawa Tengah (JATENG)</option>
-                        <option value="JABAR">Jawa Barat (JABAR)</option>
-                        <option value="KALBAR">
-                          Kalimantan Barat (KALBAR)
-                        </option>
-                        <option value="KALTIM">
-                          Kalimantan Timur (KALTIM)
-                        </option>
-                        <option value="KALTENG">
-                          Kalimantan Tengah (KALTENG)
-                        </option>
-                        <option value="KALSEL">
-                          Kalimantan Selatan (KALSEL)
-                        </option>
-                        <option value="KALUT">Kalimantan Utara (KALUT)</option>
-                        <option value="SUMBAR">Sumatera Barat (SUMBAR)</option>
-                        <option value="SUMSEL">
-                          Sumatera Selatan (SUMSEL)
-                        </option>
-                        <option value="SUMUT">Sumatera Utara (SUMUT)</option>
-                      </select>
-                      <span className="select-icon">
-                        <i className="icofont-rounded-down"></i>
-                      </span>
+              {/* shoping box */}
+              <div className="shiping-box">
+                <div className="row">
+                  <div className="col-md-6 col-12">
+                    <div className="calculate-shiping">
+                      <h3>Calculate Shipping</h3>
+                      {/* select top */}
+                      <div className="outline-select ">
+                        <select>
+                          <option value="JKT">Jakarta (JKT)</option>
+                          <option value="JATIM">Jawa Timur (JATIM)</option>
+                          <option value="JATENG">Jawa Tengah (JATENG)</option>
+                          <option value="JABAR">Jawa Barat (JABAR)</option>
+                          <option value="KALBAR">
+                            Kalimantan Barat (KALBAR)
+                          </option>
+                          <option value="KALTIM">
+                            Kalimantan Timur (KALTIM)
+                          </option>
+                          <option value="KALTENG">
+                            Kalimantan Tengah (KALTENG)
+                          </option>
+                          <option value="KALSEL">
+                            Kalimantan Selatan (KALSEL)
+                          </option>
+                          <option value="KALUT">
+                            Kalimantan Utara (KALUT)
+                          </option>
+                          <option value="SUMBAR">
+                            Sumatera Barat (SUMBAR)
+                          </option>
+                          <option value="SUMSEL">
+                            Sumatera Selatan (SUMSEL)
+                          </option>
+                          <option value="SUMUT">Sumatera Utara (SUMUT)</option>
+                        </select>
+                        <span className="select-icon">
+                          <i className="icofont-rounded-down"></i>
+                        </span>
+                      </div>
+                      {/* outline shiping bottom */}
+                      <div className="outline-select shipping-select">
+                        <select>
+                          <option value="">Jakarta</option>
+                          <option value="">Surabaya</option>
+                          <option value="">Semarang</option>
+                          <option value="">Bandung</option>
+                        </select>
+                        <span className="select-icon">
+                          <i className="icofont-rounded-down"></i>
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        name="postalcode"
+                        id="postalcode"
+                        placeholder="Postalcode/ZIP"
+                        className="cart-page-input-text"
+                      />
+                      <button type="submit">Update Adress</button>
+                    </div>
+                  </div>
+                  {/* overview right */}
+                  <div className="col-md-6 col-12">
+                    <div className="cart-overview">
+                      <h3>Cart Totals</h3>
+                      <ul className="lab-ul">
+                        <li>
+                          <span className="pull-left">Cart Subtotal</span>
+                          <p className="pull-right">$ {cartSubtotal}</p>
+                        </li>
+                      </ul>
+                      <ul className="lab-ul">
+                        <li>
+                          <span className="pull-left">Shiping And Handling</span>
+                          <p className="pull-right">Free Shipping</p>
+                        </li>
+                      </ul>
+                      <ul className="lab-ul">
+                        <li>
+                          <span className="pull-left">Order Total</span>
+                          <p className="pull-right">$ {orderTotal.toFixed(2)}</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 col-12">right side</div>
               </div>
             </div>
+            {/* cart bottom end -------------------- */}
           </div>
         </div>
       </div>
