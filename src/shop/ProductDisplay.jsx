@@ -8,7 +8,7 @@ const desc = (
 );
 const ProductDisplay = ({ item }) => {
   // console.log(item);
-  const { name, id, price, seller, ratingsCount, quantity,img } = item;
+  const { name, id, price, seller, ratingsCount, quantity, img } = item;
   const [prequantity, setQuantity] = useState(quantity);
   const [coupon, setCoupon] = useState("");
   const [size, setSize] = useState("Select Size");
@@ -36,15 +36,34 @@ const ProductDisplay = ({ item }) => {
     e.preventDefault();
     const product = {
       id: id,
-      img:img,
+      img: img,
       name: name,
       price: price,
       size: size,
+      quantity: prequantity,
       color: color,
       coupon: coupon,
-    }
+    };
     console.log(product);
-  }
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProductIndex = existingCart.findIndex(
+      (item) => item.id === id
+    );
+    if (existingProductIndex !== -1) {
+      existingCart[existingProductIndex].quantity += prequantity;
+    } else {
+      existingCart.push(product);
+    }
+    // update local storage
+    localStorage.setItem("cart", JSON.stringify(existingCart));
+
+    // rset from fields
+    setQuantity(1);
+    setSize("Select Size");
+    setColor("Select Color");
+    setCoupon("");
+  };
 
   return (
     <div>
@@ -108,14 +127,18 @@ const ProductDisplay = ({ item }) => {
           </div>
           {/* cooupon fields*/}
           <div className="discount-code mb-2">
-            <input type="text" placeholder="Enter coupon code" onChange={(e) => setCoupon(e.target.value)}/>
+            <input
+              type="text"
+              placeholder="Enter coupon code"
+              onChange={(e) => setCoupon(e.target.value)}
+            />
           </div>
           {/* button section */}
           <button type="submit" className="lab-btn">
-           <span> Add To Cart</span>
+            <span> Add To Cart</span>
           </button>
           <Link to="/cart-page" className="lab-btn bg-primary">
-           <span>Chekcout</span>
+            <span>Chekcout</span>
           </Link>
         </form>
       </div>
