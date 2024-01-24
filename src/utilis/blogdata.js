@@ -4,7 +4,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Business Ueporting Rouncil Them Could Plan.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '7',
         btnText: 'Read More',
         metaList: [
             {
@@ -23,7 +23,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Financial Reporting Qouncil What Could More.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '99',
         btnText: 'Read More',
         metaList: [
             {
@@ -42,7 +42,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Consulting Reporting Qounc Arei Could More.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '17',
         btnText: 'Read More',
         metaList: [
             {
@@ -61,7 +61,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Strategic Social Media and of visual design.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '28',
         btnText: 'Read More',
         metaList: [
             {
@@ -80,7 +80,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Find the Right Path for your Group Course online.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '39',
         btnText: 'Read More',
         metaList: [
             {
@@ -99,7 +99,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'Learn by doing with Real World Projects other countries.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '8',
         btnText: 'Read More',
         metaList: [
             {
@@ -118,7 +118,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'The Importance Of Intrinsic for Students.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '50',
         btnText: 'Read More',
         metaList: [
             {
@@ -137,7 +137,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'A Better Alternative To Grading Student Writing.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '75',
         btnText: 'Read More',
         metaList: [
             {
@@ -156,7 +156,7 @@ const blogList = [
         imgAlt: 'Blog Thumb',
         title: 'The Challenge Global Learning In Public Education.',
         desc: 'Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe',
-        commentCount: '3',
+        commentCount: '19',
         btnText: 'Read More',
         metaList: [
             {

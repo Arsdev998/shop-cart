@@ -78,12 +78,12 @@ const CartPage = () => {
                     <tr key={index}>
                       <td className="product-item cat-product">
                         <div className="p-thumb">
-                          <Link to={"/shop"}>
+                          <Link to={`/shop/${item.id}`}>
                             <img src={item.img} alt="" />
                           </Link>
                         </div>
                         <div className="p-content">
-                          <Link to={"/shop"}>{item.name}</Link>
+                          <Link to={`/shop/${item.id}`}>{item.name}</Link>
                         </div>
                       </td>
 
